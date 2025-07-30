@@ -2,46 +2,48 @@
   <section class="card">
     <h2>Projects</h2>
 
+    <!-- Tabs -->
+    <div style="text-align:center; margin-bottom: 1rem;">
+      <button class="tab-button active" onclick="showProject('aa')">American Airlines</button>
+      <button class="tab-button" onclick="showProject('pepsico')">PepsiCo</button>
+      <button class="tab-button" onclick="showProject('advent')">AdventHealth</button>
+    </div>
+
     <!-- American Airlines -->
-    <div class="card" style="margin-top: 1rem; background-color: #fdfdfd;">
+    <div id="aa" class="tab-content" style="display: block;">
       <h3 style="color: #4a00e0;">American Airlines – Azure Data Lake Integration</h3>
-      <p>You led the development of a high-throughput data platform on Azure, enabling structured and semi-structured data pipelines from multiple sources to Snowflake using Talend and Matillion.</p>
+      <p>Designed and implemented an enterprise-grade ETL framework using Talend and Matillion on Azure, integrating data into Snowflake with full support for batch and real-time ingestion.</p>
       <ul>
-        <li>Built modular dbt models for ML and BI analytics.</li>
-        <li>Used Azure Event Hubs and Functions for real-time data ingestion.</li>
-        <li>Optimized Spark jobs in Databricks with partitioning and caching.</li>
-        <li>Implemented CI/CD via Azure DevOps, Git, and Maven.</li>
-        <li>Applied data governance tools: Alation, Collibra.</li>
-        <li>Enabled Power BI dashboards with row-level security.</li>
+        <li>Built modular dbt models to power ML pipelines and BI layers.</li>
+        <li>Integrated Azure Functions + Event Hubs for real-time streaming into Snowflake.</li>
+        <li>Optimized Databricks Spark jobs with partitioning and tuning.</li>
+        <li>Enabled CI/CD workflows via Azure DevOps and Git.</li>
+        <li>Applied governance with Alation and Collibra.</li>
       </ul>
-      <p><strong>Tools:</strong> Azure Data Factory, Databricks, Snowflake, Talend, Matillion, Python, dbt, Power BI</p>
     </div>
 
     <!-- PepsiCo -->
-    <div class="card" style="margin-top: 1rem; background-color: #fdfdfd;">
-      <h3 style="color: #4a00e0;">PepsiCo – GCP Migration & Streaming Architecture</h3>
-      <p>You migrated legacy ETL workflows from Oracle and SAS to GCP. You also built real-time dataflows for analytics and reporting using Composer and Pub/Sub.</p>
+    <div id="pepsico" class="tab-content" style="display: none;">
+      <h3 style="color: #4a00e0;">PepsiCo – GCP Data Platform Modernization</h3>
+      <p>Led the migration of Oracle and SAS ETL processes to Google Cloud Platform, building scalable, automated pipelines using Dataproc, BigQuery, and Pub/Sub for real-time insights.</p>
       <ul>
-        <li>Rebuilt ETL with Dataproc (PySpark) and BigQuery for scale.</li>
-        <li>Triggered DAGs using Pub/Sub and Cloud Functions.</li>
-        <li>Deployed secured infra with Terraform and IAM.</li>
-        <li>Enhanced Tableau reports with BigQuery views.</li>
+        <li>Converted legacy workflows to PySpark-based Dataproc jobs.</li>
+        <li>Triggered DAGs in Composer via Pub/Sub for pipeline automation.</li>
+        <li>Used Terraform for GCP infrastructure provisioning and IAM role setup.</li>
+        <li>Improved Tableau performance with BigQuery partitioned datasets.</li>
       </ul>
-      <p><strong>Tools:</strong> GCP (BigQuery, Pub/Sub, Dataproc, Composer), Terraform, Airflow, Tableau, Python</p>
     </div>
 
     <!-- AdventHealth -->
-    <div class="card" style="margin-top: 1rem; background-color: #fdfdfd;">
+    <div id="advent" class="tab-content" style="display: none;">
       <h3 style="color: #4a00e0;">AdventHealth – AWS Clinical Data Exchange</h3>
-      <p>Built HIPAA-compliant data pipelines using AWS for real-time ingestion and processing of clinical records using HL7/FHIR standards.</p>
+      <p>Architected HIPAA-compliant pipelines on AWS for ingesting and processing real-time EHR data using HL7 and FHIR standards.</p>
       <ul>
-        <li>Developed streaming ETL with Kinesis, Lambda, and SQS.</li>
-        <li>Built FHIR-compliant RESTful APIs for patient data access.</li>
-        <li>Migrated on-prem data to AWS S3 and Redshift.</li>
-        <li>Standardized metadata with Talend and Informatica.</li>
-        <li>Built Snowflake dbt models and Power BI dashboards.</li>
+        <li>Built streaming ETL pipelines with Kinesis, Lambda, and SQS.</li>
+        <li>Developed FHIR-based APIs to standardize patient record access.</li>
+        <li>Migrated critical data to Snowflake and S3 with Talend orchestration.</li>
+        <li>Enabled downstream analytics with Power BI and dbt models.</li>
       </ul>
-      <p><strong>Tools:</strong> AWS (Kinesis, Lambda, Redshift, SQS), Talend, Informatica, Snowflake, FHIR, HL7, Power BI</p>
     </div>
   </section>
 </div>
