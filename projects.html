@@ -1,49 +1,47 @@
 <div class="container">
+  <!-- American Airlines -->
   <section class="card">
-    <h2>Projects</h2>
+    <h2>American Airlines – Azure Data Lake Integration</h2>
+    <p>
+      Designed and implemented an enterprise-grade ETL framework using Talend and Matillion on Azure. 
+      Ingested structured and semi-structured data into Snowflake while supporting both batch and real-time data flows.
+    </p>
+    <ul>
+      <li>Built modular dbt models for ML pipelines and reporting layers.</li>
+      <li>Enabled real-time ingestion using Azure Event Hubs and Functions.</li>
+      <li>Optimized Spark performance in Azure Databricks with partitioning.</li>
+      <li>Implemented CI/CD with Azure DevOps and Git.</li>
+      <li>Enforced data governance using Alation and Collibra.</li>
+    </ul>
+  </section>
 
-    <!-- Tabs -->
-    <div style="text-align:center; margin-bottom: 1rem;">
-      <button class="tab-button active" onclick="showProject('aa')">American Airlines</button>
-      <button class="tab-button" onclick="showProject('pepsico')">PepsiCo</button>
-      <button class="tab-button" onclick="showProject('advent')">AdventHealth</button>
-    </div>
+  <!-- PepsiCo -->
+  <section class="card">
+    <h2>PepsiCo – GCP Data Platform Modernization</h2>
+    <p>
+      Migrated legacy ETL workflows from Oracle and SAS to GCP. 
+      Built scalable pipelines using Dataproc, Pub/Sub, and BigQuery to support real-time reporting and analytics.
+    </p>
+    <ul>
+      <li>Rebuilt ETL logic using PySpark on Dataproc with Composer orchestration.</li>
+      <li>Used Pub/Sub and Cloud Functions to trigger real-time pipelines.</li>
+      <li>Managed secure deployments using Terraform for GCP resources.</li>
+      <li>Improved Tableau dashboards with BigQuery optimizations.</li>
+    </ul>
+  </section>
 
-    <!-- American Airlines -->
-    <div id="aa" class="tab-content" style="display: block;">
-      <h3 style="color: #4a00e0;">American Airlines – Azure Data Lake Integration</h3>
-      <p>Designed and implemented an enterprise-grade ETL framework using Talend and Matillion on Azure, integrating data into Snowflake with full support for batch and real-time ingestion.</p>
-      <ul>
-        <li>Built modular dbt models to power ML pipelines and BI layers.</li>
-        <li>Integrated Azure Functions + Event Hubs for real-time streaming into Snowflake.</li>
-        <li>Optimized Databricks Spark jobs with partitioning and tuning.</li>
-        <li>Enabled CI/CD workflows via Azure DevOps and Git.</li>
-        <li>Applied governance with Alation and Collibra.</li>
-      </ul>
-    </div>
-
-    <!-- PepsiCo -->
-    <div id="pepsico" class="tab-content" style="display: none;">
-      <h3 style="color: #4a00e0;">PepsiCo – GCP Data Platform Modernization</h3>
-      <p>Led the migration of Oracle and SAS ETL processes to Google Cloud Platform, building scalable, automated pipelines using Dataproc, BigQuery, and Pub/Sub for real-time insights.</p>
-      <ul>
-        <li>Converted legacy workflows to PySpark-based Dataproc jobs.</li>
-        <li>Triggered DAGs in Composer via Pub/Sub for pipeline automation.</li>
-        <li>Used Terraform for GCP infrastructure provisioning and IAM role setup.</li>
-        <li>Improved Tableau performance with BigQuery partitioned datasets.</li>
-      </ul>
-    </div>
-
-    <!-- AdventHealth -->
-    <div id="advent" class="tab-content" style="display: none;">
-      <h3 style="color: #4a00e0;">AdventHealth – AWS Clinical Data Exchange</h3>
-      <p>Architected HIPAA-compliant pipelines on AWS for ingesting and processing real-time EHR data using HL7 and FHIR standards.</p>
-      <ul>
-        <li>Built streaming ETL pipelines with Kinesis, Lambda, and SQS.</li>
-        <li>Developed FHIR-based APIs to standardize patient record access.</li>
-        <li>Migrated critical data to Snowflake and S3 with Talend orchestration.</li>
-        <li>Enabled downstream analytics with Power BI and dbt models.</li>
-      </ul>
-    </div>
+  <!-- AdventHealth -->
+  <section class="card">
+    <h2>AdventHealth – AWS Clinical Data Exchange</h2>
+    <p>
+      Built HIPAA-compliant, real-time pipelines for processing electronic health records using HL7 and FHIR standards. 
+      Integrated AWS services to support clinical data ingestion and API-based access.
+    </p>
+    <ul>
+      <li>Used Kinesis and Lambda for real-time health data processing.</li>
+      <li>Developed FHIR-compliant REST APIs for patient record access.</li>
+      <li>Migrated clinical data from on-prem to S3 and Snowflake using Talend.</li>
+      <li>Enabled advanced analytics through Power BI dashboards.</li>
+    </ul>
   </section>
 </div>
