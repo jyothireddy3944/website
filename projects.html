@@ -1,80 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: linear-gradient(to right, #4a00e0, #8e2de2);
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
-    }
-    nav {
-      background: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      padding: 1rem;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-      color: #4a00e0;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-    }
-    h1, h2 {
-      margin-bottom: 1rem;
-    }
-    .card {
-      background: white;
-      border-radius: 1rem;
-      padding: 1.5rem;
-      box-shadow: 0 0 20px rgba(0,0,0,0.05);
-      margin-bottom: 1.5rem;
-    }
-    ul {
-      padding-left: 1.5rem;
-    }
-    .profile-img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-top: 1rem;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Jyothi Reddy</h1>
-    <p>Data Engineer | Cloud & Big Data Specialist</p>
-    <img src="profile.jpg" alt="Profile" class="profile-img">
-  </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="education.html">Education</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <div class="container">
-<section class='card'><h2>Projects</h2>
-      <ul>
-        <li>Azure Snowflake Pipeline for American Airlines (ETL with Talend, Matillion, Python)</li>
-        <li>GCP Dataflow Streaming Project for PepsiCo (Airflow, BigQuery, Composer)</li>
-        <li>AWS Kinesis & Lambda Real-time Health ETL for AdventHealth (FHIR, HL7, HIPAA Compliance)</li>
-      </ul></section></div></body></html>
+<section class="card">
+  <h2>Detailed Projects</h2>
+
+  <div>
+    <h3>American Airlines – Enterprise Azure Data Lake Integration</h3>
+    <p>You led the development of a high-throughput data engineering platform on Azure, building ETL pipelines using Talend and Matillion to extract structured and semi-structured data into a Snowflake warehouse. The architecture followed medallion principles (bronze/silver/gold) to improve semantic clarity and maintain governance layers.</p>
+    <ul>
+      <li>Automated modular dbt models to support ML and BI reporting layers.</li>
+      <li>Implemented real-time ingestion using Azure Event Hubs and Functions into Snowflake.</li>
+      <li>Orchestrated dynamic Matillion pipelines with Python parameterization.</li>
+      <li>Boosted Spark job performance in Databricks with partitioning and caching.</li>
+      <li>CI/CD enabled via Azure DevOps, Git, and Maven.</li>
+      <li>Integrated data governance tools: Collibra, Alation.</li>
+      <li>Enabled Power BI dashboards with row-level security.</li>
+    </ul>
+    <p><strong>Tech Stack:</strong> Azure Data Factory, Databricks, Snowflake, Matillion, Talend, dbt, Spark, Python, Azure Functions, Event Hubs, Power BI</p>
+  </div>
+
+  <div>
+    <h3>PepsiCo – GCP Dataflow & Migration Modernization</h3>
+    <p>At PepsiCo, you redesigned legacy ETL workflows and migrated them from Oracle and SAS systems into a scalable, modern stack on Google Cloud Platform. The project emphasized real-time data processing and cost-effective infrastructure.</p>
+    <ul>
+      <li>Built PySpark ELT workflows on Dataproc and BigQuery with optimized partitioning.</li>
+      <li>Migrated legacy Oracle/SAS ETL to Composer-triggered Airflow jobs.</li>
+      <li>Deployed secure CI/CD infrastructure using Terraform and GCP IAM.</li>
+      <li>Linked Pub/Sub to trigger real-time workflows with Cloud Functions.</li>
+      <li>Improved Tableau performance by tuning BigQuery views and datasets.</li>
+    </ul>
+    <p><strong>Tech Stack:</strong> GCP (BigQuery, Dataproc, Pub/Sub, Composer), Python, Airflow, Terraform, Dataprep, Tableau, Oracle SQL</p>
+  </div>
+
+  <div>
+    <h3>AdventHealth – AWS-Powered Clinical Data Exchange</h3>
+    <p>You built and managed HIPAA-compliant, real-time clinical data pipelines on AWS. These pipelines ensured accurate ingestion, transformation, and analysis of electronic health records using FHIR and HL7 standards.</p>
+    <ul>
+      <li>Designed real-time ETL with AWS Kinesis, Lambda, and SQS.</li>
+      <li>Developed FHIR-compliant APIs for care coordination and interoperability.</li>
+      <li>Migrated on-premise data to AWS S3 and Redshift for scalability.</li>
+      <li>Standardized metadata and lineage using Talend/Informatica.</li>
+      <li>Built dbt models in Snowflake for clean clinical data layers.</li>
+      <li>Delivered Power BI dashboards with patient flow and quality metrics.</li>
+    </ul>
+    <p><strong>Tech Stack:</strong> AWS (Lambda, Kinesis, Redshift, SQS), Snowflake, Talend, Informatica, SSIS, FHIR, HL7, Python, Power BI</p>
+  </div>
+</section>
