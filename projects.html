@@ -1,1 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #4a00e0, #8e2de2);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    nav {
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      color: #4a00e0;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+    h1, h2 {
+      margin-bottom: 1rem;
+    }
+    .card {
+      background: white;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+      margin-bottom: 1.5rem;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-top: 1rem;
+    }
+    .project-title {
+      cursor: pointer;
+      color: #4a00e0;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      transition: color 0.2s ease;
+    }
+    .project-title:hover {
+      color: #6a1b9a;
+    }
+    .project-details {
+      display: none;
+      margin-top: 0.5rem;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Jyothi Reddy</h1>
+    <p>Data Engineer | Cloud & Big Data Specialist</p>
+    <img src="profile.jpg" alt="Profile" class="profile-img">
+  </header>
 
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="experience.html">Experience</a>
+    <a href="projects.html">Projects</a>
+    <a href="education.html">Education</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <section class="card">
+      <h2>Experience</h2>
+
+      <!-- Experience 1 -->
+      <div class="project">
+        <h3 class="project-title" onclick="toggleProject('exp1', this)">▶ American Airlines – Azure Data Lake Integration</h3>
+        <div id="exp1" class="project-details">
+          <p>
+            Designed and implemented an enterprise-grade ETL framework using Talend and Matillion on Azure. 
+            Ingested structured and semi-structured data into Snowflake while supporting both batch and real-time data flows.
+          </p>
+          <ul>
+            <li>Built modular dbt models for ML pipelines and reporting layers.</li>
+            <li>Enabled real-time ingestion using Azure Event Hubs and Functions.</li>
+            <li>Optimized Spark performance in Azure Databricks with partitioning.</li>
+            <li>Implemented CI/CD with Azure DevOps and Git.</li>
+            <li>Enforced data governance using Alation and Collibra.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Experience 2 -->
+      <div class="project">
+        <h3 class="project-title" onclick="toggleProject('exp2', this)">▶ PepsiCo – GCP Data Platform Modernization</h3>
+        <div id="exp2" class="project-details">
+          <p>
+            Migrated legacy ETL workflows from Oracle and SAS to GCP. 
+            Built scalable pipelines using Dataproc, Pub/Sub, and BigQuery to support real-time reporting and analytics.
+          </p>
+          <ul>
+            <li>Rebuilt ETL logic using PySpark on Dataproc with Composer orchestration.</li>
+            <li>Used Pub/Sub and Cloud Functions to trigger real-time pipelines.</li>
+            <li>Managed secure deployments using Terraform for GCP resources.</li>
+            <li>Improved Tableau dashboards with BigQuery optimizations.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Experience 3 -->
+      <div class="project">
+        <h3 class="project-title" onclick="toggleProject('exp3', this)">▶ AdventHealth – AWS Clinical Data Exchange</h3>
+        <div id="exp3" class="project-details">
+          <p>
+            Built HIPAA-compliant, real-time pipelines for processing electronic health records using HL7 and FHIR standards. 
+            Integrated AWS services to support clinical data ingestion and API-based access.
+          </p>
+          <ul>
+            <li>Used Kinesis and Lambda for real-time health data processing.</li>
+            <li>Developed FHIR-compliant REST APIs for patient record access.</li>
+            <li>Migrated clinical data from on-prem to S3 and Snowflake using Talend.</li>
+            <li>Enabled advanced analytics through Power BI dashboards.</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- JavaScript for toggle functionality -->
+  <script>
+    function toggleProject(id, heading) {
+      const content = document.getElementById(id);
+      const isOpen = content.style.display === 'block';
+
+      // Close all experience sections
+      document.querySelectorAll('.project-details').forEach(div => div.style.display = 'none');
+      document.querySelectorAll('.project-title').forEach(title => {
+        title.textContent = title.textContent.replace('▼', '▶');
+      });
+
+      // Open the selected one
+      if (!isOpen) {
+        content.style.display = 'block';
+        heading.textContent = heading.textContent.replace('▶', '▼');
+      }
+    }
+  </script>
+</body>
+</html>
