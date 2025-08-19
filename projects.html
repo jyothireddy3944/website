@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Experience</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
   <style>
@@ -15,7 +15,7 @@
     }
     header {
       background: linear-gradient(to right, #4a00e0, #8e2de2);
-      color: white;
+      color: #fff;
       padding: 1.5rem;
       text-align: center;
     }
@@ -28,7 +28,7 @@
     nav a {
       margin: 0 1rem;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 700;
       color: #4a00e0;
     }
     .container {
@@ -36,18 +36,13 @@
       margin: auto;
       padding: 2rem;
     }
-    h1, h2 {
-      margin-bottom: 1rem;
-    }
+    h1, h2 { margin-bottom: 1rem; }
     .card {
-      background: white;
+      background: #fff;
       border-radius: 1rem;
       padding: 1.5rem;
       box-shadow: 0 0 20px rgba(0,0,0,0.05);
       margin-bottom: 1.5rem;
-    }
-    ul {
-      padding-left: 1.5rem;
     }
     .profile-img {
       width: 150px;
@@ -56,20 +51,60 @@
       border-radius: 50%;
       margin-top: 1rem;
     }
-    .project-title {
+
+    /* Project header with link + arrow */
+    .project-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       cursor: pointer;
+    }
+    .project-title {
       color: #4a00e0;
-      margin-bottom: 0.5rem;
-      font-weight: bold;
-      transition: color 0.2s ease;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color .2s ease;
     }
     .project-title:hover {
       color: #6a1b9a;
+      text-decoration: underline;
     }
-    .project-details {
-      display: none;
-      margin-top: 0.5rem;
-      text-align: left;
+
+    details {
+      margin-top: .5rem;
+    }
+    summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+      cursor: pointer;
+    }
+    summary::-webkit-details-marker { display: none; }
+
+    /* Arrow styling (down by default) */
+    .chev {
+      width: .6rem;
+      height: .6rem;
+      border-right: 2px solid #666;
+      border-bottom: 2px solid #666;
+      transform: rotate(45deg); /* down arrow */
+      transition: transform .2s ease;
+      margin-left: .5rem;
+    }
+    details[open] .chev {
+      transform: rotate(-135deg); /* up arrow */
+    }
+
+    .project-summary {
+      margin-top: .75rem;
+      line-height: 1.6;
+      color: #444;
+    }
+    code {
+      background: #f0f0f0;
+      padding: 0 .25rem;
+      border-radius: .25rem;
     }
   </style>
 </head>
@@ -88,6 +123,34 @@
     <a href="education.html">Education</a>
     <a href="contact.html">Contact</a>
   </nav>
-  </script>
+
+  <div class="container">
+    <h2>Projects</h2>
+
+    <div class="card">
+      <details>
+        <summary>
+          <a
+            href="https://github.com/jyothireddy3944/university-placement-.git"
+            target="_blank"
+            rel="noopener"
+            class="project-title"
+          >
+            University Placement Analytics
+          </a>
+          <span class="chev"></span>
+        </summary>
+        <div class="project-summary">
+          <p><strong>University Placement – Power BI Suite</strong> with ETL-ready data, a Power BI build kit, and a live Streamlit preview.</p>
+          <ul>
+            <li><strong>Dataset:</strong> <code>students_placements_fact.csv</code> with fields for student, year, batch, branch, CGPA, placement status, verification, company, and salary (LPA).</li>
+            <li><strong>Power BI kit:</strong> theme, DAX measures, and build steps to recreate KPIs, placement trends, and company insights.</li>
+            <li><strong>Live preview:</strong> Streamlit app that mirrors the dashboard layout for interactive exploration.</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+  </div>
 </body>
 </html>
